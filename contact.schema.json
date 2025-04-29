@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Contact",
+  "description": "Represents an individual person associated with accounts, leads, or opportunities.",
+  "type": "object",
+  "properties": {
+    "contactId": {
+      "description": "Unique identifier for the contact",
+      "type": "string",
+      "format": "uuid"
+    },
+    "firstName": {
+      "description": "First name of the contact",
+      "type": "string"
+    },
+    "lastName": {
+      "description": "Last name of the contact",
+      "type": "string"
+    },
+    "email": {
+      "description": "Primary email address of the contact",
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "description": "Primary phone number of the contact",
+      "type": "string"
+    },
+    "accountId": {
+      "description": "Identifier of the account this contact is associated with (optional)",
+      "type": ["string", "null"],
+      "format": "uuid"
+    },
+    "title": {
+      "description": "Job title of the contact",
+      "type": ["string", "null"]
+    },
+    "createdAt": {
+      "description": "Timestamp when the contact was created",
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "description": "Timestamp when the contact was last updated",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "contactId",
+    "firstName",
+    "lastName",
+    "email",
+    "createdAt",
+    "updatedAt"
+  ],
+  "additionalProperties": false
+} 

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Account",
+  "description": "Represents a company or organization.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the account",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "description": "Name of the account/organization",
+      "type": "string"
+    },
+    "industry": {
+      "description": "Industry the account belongs to",
+      "type": ["string", "null"]
+    },
+    "owner_id": {
+      "description": "Identifier of the user who owns this account",
+      "type": ["string", "null"],
+      "format": "uuid"
+    },
+    "createdAt": {
+      "description": "Timestamp when the account was created",
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "description": "Timestamp when the account was last updated",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "createdAt",
+    "updatedAt"
+  ],
+  "additionalProperties": false
+} 

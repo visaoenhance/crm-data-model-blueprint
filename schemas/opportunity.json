@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Opportunity",
+  "description": "Represents a potential sales deal associated with an account.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the opportunity",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "description": "Name of the opportunity",
+      "type": "string"
+    },
+    "accountId": {
+      "description": "Identifier of the account associated with this opportunity",
+      "type": "string",
+      "format": "uuid"
+    },
+    "stage": {
+      "description": "Current stage in the sales process",
+      "type": "string",
+      "enum": [
+        "Prospecting",
+        "Qualification",
+        "Proposal",
+        "Negotiation",
+        "Closed Won",
+        "Closed Lost"
+      ]
+    },
+    "amount": {
+      "description": "Estimated value of the opportunity",
+      "type": ["number", "null"],
+      "format": "float",
+      "minimum": 0
+    },
+    "close_date": {
+      "description": "Expected date when the opportunity is expected to close",
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "createdAt": {
+      "description": "Timestamp when the opportunity was created",
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "description": "Timestamp when the opportunity was last updated",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "accountId",
+    "stage",
+    "createdAt",
+    "updatedAt"
+  ],
+  "additionalProperties": false
+} 

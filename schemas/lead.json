@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lead",
+  "description": "Represents a potential prospect (individual or company).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the lead",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+        "description": "Name of the lead (can be person or company name)",
+        "type": "string"
+    },
+    "source": {
+      "description": "Source from which the lead was generated (e.g., Web Form, Referral)",
+      "type": ["string", "null"]
+    },
+    "status": {
+      "description": "Current status of the lead (e.g., New, Contacted, Qualified, Unqualified)",
+      "type": "string",
+      "enum": ["New", "Contacted", "Qualified", "Unqualified"]
+    },
+    "convertedAccountId": {
+        "description": "Identifier of the account created upon conversion (optional)",
+        "type": ["string", "null"],
+        "format": "uuid"
+    },
+    "createdAt": {
+      "description": "Timestamp when the lead was created",
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "description": "Timestamp when the lead was last updated",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "status",
+    "createdAt",
+    "updatedAt"
+  ],
+  "additionalProperties": false
+} 
