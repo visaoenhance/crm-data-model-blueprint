@@ -1,6 +1,10 @@
 ---
 # CRM Data Model Blueprint
 
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/visaoenhance/crm-data-model-blueprint)
+![Built By](https://img.shields.io/badge/built%20by-VisaoEnhance-blue)
+
 This repository provides a modular, scalable **CRM data model blueprint** designed for SaaS solutions, system integrators, and architecture teams. It includes JSON schema definitions, a visual ERD diagram, and architecture decision records to accelerate data strategy and implementation planning.
 
 > ✅ Built for technical reviewers, hand-off readiness, and long-term maintainability.
